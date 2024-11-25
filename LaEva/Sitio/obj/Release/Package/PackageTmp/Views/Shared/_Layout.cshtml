@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Eva y Food truck La Ev@lución</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta name="description" content="Pagina web de La eva">
+  
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Pattaya&display=swap" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Pattaya&display=swap" rel="stylesheet">
+</head>
+<body>
+    <Header class="header">
+        <a href="index.cshtml">
+            <h1 class="no-margin centrar-texto titulo grande"><span class=" texto texto-blanco mediano">URBAN FOOD</span> La Eva <span class=" texto texto-blanco mediano">- FOOD TRUCK</span> La Ev@lución</h1>
+        </a>
+        <div class="barra">
+            <nav class="navegacion ">
+                @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "navegacion__enlace" })
+                @Html.ActionLink("Comida", "Food", "Home", new { area = "" }, new { @class = "navegacion__enlace" })
+                @Html.ActionLink("Lugares", "About", "Home", new { area = "" }, new { @class = "navegacion__enlace" })
+                @Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "navegacion__enlace" })
+            </nav>
+        </div>
+    </Header><!--header-->
+    
+    <div class=".contenedor fondo">
+        @RenderBody()
+    </div><!--Cuerpo-->
+
+    <footer class="footer">
+            <div>
+                <div class="redes">
+                    <h3 class="redes__titulo titulo">Seguinos en nuestras redes</h3>
+                    <a href="https://www.facebook.com/laevacarrodehamburguesas" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/carro_laeva/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                            <path d="M16.5 7.5l0 .01" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.instagram.com/la_evolucionurbanfood/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                            <path d="M16.5 7.5l0 .01" />
+                        </svg>
+                    </a>
+                </div>
+
+                <h4 class="derechos negro">&copy; @DateTime.Now.Year - Todos los derechos reservados a La Eva.</h4>
+            </div>
+        </footer><!--footer-->
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

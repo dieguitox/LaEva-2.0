@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LaEvaModelStoreContainer" CdmEntityContainer="LaEvaEntities">
+    <EntitySetMapping Name="Hamburguesa">
+      <EntityTypeMapping TypeName="LaEvaModel.Hamburguesa">
+        <MappingFragment StoreEntitySet="Hamburguesa">
+          <ScalarProperty Name="burguerID" ColumnName="burguerID" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingredientes">
+      <EntityTypeMapping TypeName="LaEvaModel.Ingredientes">
+        <MappingFragment StoreEntitySet="Ingredientes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="LaEvaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ListaIngredientes" TypeName="LaEvaModel.ListaIngredientes" StoreEntitySet="ListaIngredientes">
+      <EndProperty Name="Hamburguesa">
+        <ScalarProperty Name="burguerID" ColumnName="burguerID" />
+      </EndProperty>
+      <EndProperty Name="Ingredientes">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

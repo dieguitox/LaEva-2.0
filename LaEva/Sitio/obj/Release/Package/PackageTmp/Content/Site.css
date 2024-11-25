@@ -1,0 +1,515 @@
+﻿:root {
+    --fuenteHeading: 'Pattaya', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --primario: #f1bb09;
+    --secundario: #000000;
+    --blanco: #ffffff;
+    --gris: #BEBEBE;
+}
+html
+{
+    box-sizing: border-box;
+    font-size:x-large;
+}
+*,*::before,*:after
+{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 1;
+    background-color: var(--gris);
+}
+
+/* Global */
+.contenedor
+{
+    width: min(90% , 120rem);
+    margin: 0 auto;
+}
+
+img
+{
+    max-width:90%;
+}
+.no-margin
+{
+    margin: 0;
+}
+.no-padding
+{
+    padding: 0;
+}
+.centrar-texto
+{
+    text-align: center;
+}
+label
+{
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+/* Header */
+.header {
+    background-color: var(--secundario);
+    height: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 1rem;
+}
+
+.titulo
+{
+    font-family: var(--fuenteHeading);
+    text-align: center;
+    margin-top: 0;
+    padding: 2rem;
+}
+
+.footer {
+    background-color: var(--secundario);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom:0;
+}
+iframe
+{
+        width: 100%;
+}
+.texto
+{
+    font-family: var(--fuenteParrafos);
+}
+.texto-blanco{
+    color: var(--blanco);
+    font-weight:bold ;
+}
+.fondo {
+    background-color: var(--gris);
+}
+.grande{
+    font-size: 6rem;
+}
+.mediano{
+    font-size:4rem;
+}
+.negro{
+    color:black;
+}
+
+@media (min-width: 440px) 
+{
+
+    .contenedor {
+        width: min(90%, 120rem);
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    h1,h2,h3
+    {
+        font-family: 'Pattaya', sans-serif;
+        line-height: 1.2;
+        color: #f1bb09;
+    }
+    h1
+    {
+        font-size: 4.8rem;
+    }
+    h2
+    {
+        font-size: 3.5rem;
+    }
+    h3
+    {
+        font-size: 3.2rem;
+    }
+    h4
+    {
+        font-size: 1.5rem;
+    }
+    p
+    {
+        font-size: 3rem;
+    }
+    img
+    {
+        max-width:90%;
+    }
+    .no-margin
+    {
+        margin: 0;
+    }
+    .no-padding
+    {
+        padding: 0;
+    }
+    .centrar-texto
+    {
+        text-align: center;
+    }
+    label
+    {
+        color: var(--blanco);
+        font-size: 3.2rem;
+    }
+    .barra
+    {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: bold;
+       
+    }
+    .navegacion
+    {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .contenido__principal
+    {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 4rem;
+    }
+
+    .comida
+    {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contenedor-campos
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1.5rem;
+        
+    } 
+    .boton
+    {
+        width: auto;
+    }
+
+    .contenido
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .redes
+    {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .mapa
+    {
+        max-width: 100%;
+        grid-column: 1/2;
+        text-align: center;
+    }
+
+    .mapa
+    {
+        grid-column: 1/3;
+        column-gap: 1.5rem;
+        margin-top: 2rem;
+        margin: 10rem;   
+    }   
+}
+
+@media (min-width: 768px) 
+{
+    .contenedor
+    {
+        width: min(90% , 120rem);
+        margin: 0 auto;
+    }
+    a
+    {
+        text-decoration:  none;
+        color: var(--secundario);
+    }
+    h1,h2,h3
+    {
+        font-family: 'Pattaya', sans-serif;
+        line-height: 1.2;
+        color: #f1bb09;
+    }
+    h1
+    {
+        font-size: 6rem;
+    }
+    h2
+    {
+        font-size: 3.5rem;
+    }
+    h3
+    {
+        font-size: 3.2rem;
+    }
+    h4
+    {
+        font-size: 1.2rem;
+    }
+    p
+    {
+        font-size: 2rem;
+    }
+    img
+    {
+        max-width:90%;
+    }
+    .no-margin
+    {
+        margin: 0;
+    }
+    .no-padding
+    {
+        padding: 0;
+    }
+    .centrar-texto
+    {
+        text-align: center;
+    }
+    .barra
+    {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navegacion , .redes
+    {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .contenido__principal
+    {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        column-gap: 4rem;
+    }
+
+    .comida
+    {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contenedor-campos
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1.5rem;
+        
+    } 
+    .boton
+    {
+        width: auto;
+    }
+
+    .contenido
+    {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1.5rem;
+        margin-top: 2rem;
+    }  
+    .contacto-bg
+    {
+        height: 100%;
+    } 
+    
+    .mapa
+    {
+        grid-column: 1/3;
+        column-gap: 1.5rem;
+        margin-top: 2rem;
+        margin: 5rem;   
+    }
+    .grande{
+        color: var(--primario);
+    }
+}
+
+.navegacion__enlace, .redes {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+.navegacion__enlace:hover
+{
+    background-color: #f1bb09;
+    color: #000000;
+}
+.derechos
+{
+    padding-top: 2rem;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.comida
+{
+    border-bottom: 1px solid #e1e1e1 ;
+    margin-bottom: 2rem;
+
+}
+.comida:last-of-type
+{
+    border-bottom: none ;
+    margin-bottom: 0;
+}
+
+.contenido
+{
+    border-bottom: 1px solid #e1e1e1 ;
+    margin-bottom: 2rem;
+}
+.contenido:last-of-type
+{
+    border-bottom: none ;
+    margin-bottom: 0;
+}
+
+.comida__imagen ,.contenido__imagen
+{
+    max-width: 100% ;
+}
+
+.formulario
+{
+    background-color: #000000;
+    width: min(90% , 100rem);
+    margin: -5rem auto 5rem auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 95%;
+}
+.formulario fieldset
+{
+    border: none;
+}
+
+.formulario legend
+{
+    text-align:  center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight:  700;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+.campo:nth-child(3),
+.campo:nth-child(4)
+{
+    grid-column: 1/3;
+}
+
+.campo
+{
+    margin-bottom: 1rem;
+}
+
+.campo label {
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: .5rem;
+        display: block;
+}
+.campo textarea
+{
+    height: 60%;   
+}
+
+.input-text
+{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem; 
+}
+.boton
+{
+    background-color: #f1bb09;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 100%;
+    text-align: center;
+    border:  none;
+}
+.boton:hover
+{
+    cursor: pointer;
+}
+
+.contenido__texto
+{
+    text-align: center;
+}
+
+.nombre
+{
+    font-size: 2rem;
+    color: #000000;
+}
+.comida__label
+{
+    font-size: 1.5rem;
+}
+li
+{
+    font-size: 1.5rem;
+}
+.borde
+{
+    padding-bottom: 2rem;
+}
+.contenido__lugar
+{
+    padding: 1rem;
+}
+
+.contacto-bg
+{
+    background-image: url(/imagenes/Food.jpg);
+    height: 70rem;
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mapa
+{
+    grid-column: 1/3;
+    column-gap: 1.5rem;
+    margin-top: 2rem;
+}
+

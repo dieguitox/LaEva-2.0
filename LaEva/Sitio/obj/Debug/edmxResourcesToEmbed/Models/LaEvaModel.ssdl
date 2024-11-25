@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LaEvaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Hamburguesa">
+    <Key>
+      <PropertyRef Name="burguerID" />
+    </Key>
+    <Property Name="burguerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" />
+    <Property Name="imagen" Type="image" />
+  </EntityType>
+  <EntityType Name="Ingredientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ListaIngredientes">
+    <Key>
+      <PropertyRef Name="burguerID" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="burguerID" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="20" />
+    <Property Name="pass" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__ListaIngr__burgu__0DAF0CB0">
+    <End Role="Hamburguesa" Type="Self.Hamburguesa" Multiplicity="1" />
+    <End Role="ListaIngredientes" Type="Self.ListaIngredientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hamburguesa">
+        <PropertyRef Name="burguerID" />
+      </Principal>
+      <Dependent Role="ListaIngredientes">
+        <PropertyRef Name="burguerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ListaIngredi__id__0EA330E9">
+    <End Role="Ingredientes" Type="Self.Ingredientes" Multiplicity="1" />
+    <End Role="ListaIngredientes" Type="Self.ListaIngredientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredientes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ListaIngredientes">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LaEvaModelStoreContainer">
+    <EntitySet Name="Hamburguesa" EntityType="Self.Hamburguesa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingredientes" EntityType="Self.Ingredientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ListaIngredientes" EntityType="Self.ListaIngredientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ListaIngr__burgu__0DAF0CB0" Association="Self.FK__ListaIngr__burgu__0DAF0CB0">
+      <End Role="Hamburguesa" EntitySet="Hamburguesa" />
+      <End Role="ListaIngredientes" EntitySet="ListaIngredientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ListaIngredi__id__0EA330E9" Association="Self.FK__ListaIngredi__id__0EA330E9">
+      <End Role="Ingredientes" EntitySet="Ingredientes" />
+      <End Role="ListaIngredientes" EntitySet="ListaIngredientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
